@@ -7,8 +7,7 @@ public class TaskSeven {
         int x = ones.nextInt();
 
         for (int i=0; i <=10; i++){
-            int table = x * i;
-            System.out.println(table);
+            System.out.println(x * i);
         }
     }
 }

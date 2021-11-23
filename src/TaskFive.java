@@ -8,8 +8,7 @@ public class TaskFive {
         Scanner two = new Scanner(System.in);
         System.out.println("Введите второе число ");
         int y = two.nextInt();
-        int product = x * y;
-        System.out.println(product);
+        System.out.println(x * y);
     }
 }
 

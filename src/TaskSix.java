@@ -8,16 +8,11 @@ public class TaskSix {
         Scanner two = new Scanner(System.in);
         System.out.println("Введите второе число ");
         int y = two.nextInt();
-        int sum = x + y;
-        int difference = x - y;
-        int product = x * y;
-        int divider = x / y;
-        int mod = x % y;
-        System.out.println(sum);
-        System.out.println(difference);
-        System.out.println(product);
-        System.out.println(divider);
-        System.out.println(mod);
+        System.out.println(x + y);
+        System.out.println(x - y);
+        System.out.println(x * y);
+        System.out.println(x / y);
+        System.out.println(x % y);
     }
 }
 
