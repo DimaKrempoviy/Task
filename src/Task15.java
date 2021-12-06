@@ -1,24 +1,36 @@
 import java.util.Scanner;
+class Task15 {
+    private static final Scanner input = new Scanner(System.in);
+    private static final String BEFORE_REPLACEMENT = "First number is %.2f, second number is %.2f before replacement";
+    private static final String AFTER_REPLACEMENT = "First number is %.2f, second number is %.2f after replacement";
+    private static final String FIRST_NUMBER_REQUEST_MESSAGE = "Enter the first number:";
+    private static final String SECOND_NUMBER_REQUEST_MESSAGE = "Enter the second number:";
 
-public class Task15 {
     public static void main(String[] args) {
+        double firstNumber = requestNumber(FIRST_NUMBER_REQUEST_MESSAGE);
+        double secondNumber = requestNumber(SECOND_NUMBER_REQUEST_MESSAGE);
 
-        Scanner i = new Scanner(System.in);
-        System.out.println("Enter the num1: ");
-        double num1 = i.nextDouble();
+        System.out.printf(BEFORE_REPLACEMENT + System.lineSeparator(), firstNumber, secondNumber);
 
-        System.out.println("Enter the num2: ");
-        double num2 = i.nextDouble();
+        Double[] numbers = {firstNumber, secondNumber};
 
-        System.out.println("num1 = " + num1 + ", " + "num2 = "+  num2 + " before replacement");
+        replace(numbers);
 
-        num1 = num2 + num1;
-        num2 = num1 - num2;
-        num1 = num1 - num2;
+        firstNumber = numbers[0];
+        secondNumber = numbers[1];
 
-        System.out.println("num1 = " + num1 + ", " + "num2 = " + num2 + " after replacement");
+        System.out.printf(AFTER_REPLACEMENT + System.lineSeparator(), firstNumber, secondNumber);
+    }
 
+    static double requestNumber(String requestMessage) {
+        System.out.println(requestMessage);
+        return input.nextDouble();
+    }
 
+    static void replace(Double[] numbers) {
+        numbers[0] += numbers[1];
+        numbers[1] = numbers[0] - numbers[1];
+        numbers[0] -= numbers[1];
     }
 }
 
