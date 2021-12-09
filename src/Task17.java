@@ -15,8 +15,8 @@ import java.util.Scanner;
             String addition = add(first, second);
             System.out.println("addition of two binary number is : " + addition);
 
-            //String sum = sum(first, second);
-            //System.out.println("Sum of two binary number is : " + sum);
+            String sum = sum(first, second);
+            System.out.println("Sum of two binary number is : " + sum);
 
             scnr.close();
 
@@ -25,11 +25,11 @@ import java.util.Scanner;
         public static String add(String first, String second) {
             int b1 = Integer.parseInt(first, 2);
             int b2 = Integer.parseInt(second, 2);
-            int sum = b1 * b2;
+            int sum = b1 + b2;
             return Integer.toBinaryString(sum);
         }
 
-        /*public static String sum(String b1, String b2) {
+        public static String sum(String b1, String b2) {
             int len1 = b1.length();
             int len2 = b2.length();
             int carry = 0;
@@ -43,6 +43,6 @@ import java.util.Scanner;
                 res = tmp % 2 + res;
             }
             return (carry == 0) ? res : "1" + res;
-        */}
+        }
 
-    //}
+    }
